@@ -1,9 +1,14 @@
-<?php function update_old_url_to_new_url() {
+<?php 
+
+#Add the following code in your WordPress theme’s functions.php file:
+
+
+function update_old_url_to_new_url() {
     global $wpdb;
 
     // Old and new URLs
-    $old_url = 'https://finance.sarkarieducation.net/apply/';
-    $new_url = 'https://sarkarieducation.net/apply-job/';
+    $old_url = 'https://sarkarieducation.net/apply-job/';
+    $new_url = 'https://blog.sarkarieducation.net/data-submit/';
 
     // Update in post content
     $wpdb->query(
@@ -41,3 +46,5 @@
     }
 }
 add_action('admin_init', 'update_old_url_to_new_url');
+
+# after change remove this code
